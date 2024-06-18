@@ -1,0 +1,17 @@
+dbt_sample_snowflake:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      ######## Please replace with your Snowflake account name
+      ######## for example sg_demo.ap-southeast-1
+      account: iysqzqp-eo05549
+#      user: "{{ env_var('dbt_user') }}"
+      user: DaikiTakeuchi
+#      password: "{{ env_var('dbt_password') }}"
+      password: Gaban2018!
+      role: accountadmin
+      database: demo_dbt
+      warehouse: dbt_dev_wh
+      schema: public
+      threads: 200
